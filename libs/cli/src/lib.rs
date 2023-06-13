@@ -39,3 +39,8 @@ impl Options for Config {
         todo!();
     }
 }
+
+#[test]
+fn check_contains() {
+    todo!()
+}
