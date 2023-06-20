@@ -4,7 +4,6 @@ use anyhow::{Context, Result};
 use clap::Parser;
 use youtube_dl::YoutubeDl;
 
-#[derive(Clone)]
 struct Config {
     pingyin: bool,
     lang: String,
@@ -32,9 +31,6 @@ struct Play {
 
     #[arg(short, long, default_value_t = true)]
     romanized: bool,
-
-    #[args(short, long)]
-    config: Config,
 }
 
 pub fn get_input() -> Result<()> {
