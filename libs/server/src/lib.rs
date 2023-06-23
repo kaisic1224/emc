@@ -32,6 +32,8 @@ pub async fn connect() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     }
 }
 
+// I just realized i have a client access token which means i dont need to do this
+// life is at an all low right neow
 pub async fn get_auth_token() -> std::result::Result<(), Box<dyn std::error::Error + Send + Sync>> {
     dotenvy::dotenv().expect("no env file");
 
