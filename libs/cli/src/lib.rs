@@ -1,7 +1,6 @@
-use std::{io, path::PathBuf};
-
 use anyhow::{Context, Result};
 use clap::Parser;
+use std::{io, path::PathBuf};
 use youtube_dl::YoutubeDl;
 
 struct Config {
@@ -44,8 +43,6 @@ pub fn get_input() -> Result<()> {
     };
     println!("{}", &args.romanized);
 
-    // let content = std::fs::read_to_string(&args.song)
-    //     .with_context(|| format!("could not read file {}", &args.song))?;
     let output = YoutubeDl::new(&args.song)
         .socket_timeout("15")
         .extract_audio(true)
